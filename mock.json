@@ -1,0 +1,22 @@
+{
+  "menu": [
+    {
+      "id": "1",
+      "topMenu": "시스템관리",
+      "name": "메뉴관리",
+      "url": "/test1",
+      "order": 1,
+      "unable": false,
+      "explain": "메뉴를 관리한다"
+    },
+    {
+      "id": "2",
+      "topMenu": "시스템관리",
+      "name": "사용자관리",
+      "url": "/test2",
+      "order": 1,
+      "unable": true,
+      "explain": "사용자를 관리한다"
+    }
+  ]
+}
