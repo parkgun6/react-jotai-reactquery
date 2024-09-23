@@ -10,6 +10,10 @@ import {
   Wrapper,
 } from './style';
 import { useNavigate } from 'react-router-dom';
+import { useAtom } from 'jotai';
+import { userAtom } from '../../../atoms/atoms';
+import { useLogout } from '../../../api/auth';
+import { Button } from '@mui/material';
 
 const Navbar = () => {
   const [showAllMenus, setShowAllMenus] = useState(false);
@@ -23,6 +27,9 @@ const Navbar = () => {
   };
 
   const navigator = useNavigate();
+
+  const [user] = useAtom(userAtom);
+  const logout = useLogout();
 
   return (
     <>
@@ -81,6 +88,16 @@ const Navbar = () => {
             </DetailMenuList>
           </DetailMenu>
         </Nav>
+        {user ? (
+          <div>
+            <h1>{user.username} 님</h1>
+            <Button onClick={logout}>Logout</Button>
+          </div>
+        ) : (
+          <div>
+            <Button onClick={() => navigator('/login')}>Login</Button>
+          </div>
+        )}
       </Wrapper>
     </>
   );

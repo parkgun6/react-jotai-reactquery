@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "json-server --watch mock.json -p 3009"
+    "start": "json-server --watch mock.json -p 3009",
+    "dev:localdev": "vite --mode localdev",
+    "dev:dev": "vite --mode dev"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

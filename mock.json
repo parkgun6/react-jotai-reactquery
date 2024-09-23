@@ -7,7 +7,7 @@
       "url": "/test1",
       "order": 1,
       "unable": false,
-      "explain": "메뉴를 관리한다"
+      "explain": "메뉴를 관리한다 test"
     },
     {
       "id": "2",
@@ -15,8 +15,25 @@
       "name": "사용자관리",
       "url": "/test2",
       "order": 1,
-      "unable": true,
+      "unable": false,
       "explain": "사용자를 관리한다"
+    },
+    {
+      "id": "3",
+      "topMenu": "시스템관리",
+      "name": "권한관리",
+      "url": "/test3",
+      "order": 1,
+      "unable": "true",
+      "explain": ""
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user",
+      "password": "1234",
+      "token": "abc123"
     }
   ]
 }

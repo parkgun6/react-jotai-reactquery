@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import MenuForm from '../MenuForm';
 import { useAtom } from 'jotai';
 import { menuAtom } from '../../../atoms/atoms';
@@ -22,9 +22,13 @@ const MenuDetail = () => {
   const handleFormSubmit = (formData: MenuData) => {
     mutateEdit({ menuData: formData, id: Number(id) });
   };
+
+  const navigator = useNavigate();
+
   const deleteMenu = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     mutateDelete(Number(id));
+    navigator(`/menu/list`);
   };
   return (
     <>
